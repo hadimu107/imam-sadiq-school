@@ -1,246 +1,105 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مدرسه وامسابق | سایت رسمی مدرسه</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>مدرسه بین المللی امام صادق ع</title>
+
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    :root {
-      --primary: #1f4e79;
-      --primary-dark: #163a5c;
-      --accent: #2e86c1;
-      --bg: #f4f7fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      --radius: 18px;
-      --container: 1200px;
-    }
+
+    html,
     body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background: #ffffff;
       font-family: Tahoma, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
       direction: rtl;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .container {
-      width: min(100% - 32px, var(--container));
-      margin: 0 auto;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fff;
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .topbar {
+
+    .page {
+      min-height: 100vh;
+
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
-      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+
+      padding-top: 70px;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 700;
-    }
-    .brand-badge {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.18);
-      display: grid;
-      place-items: center;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .brand-text h1 {
-      font-size: 1.1rem;
-      margin-bottom: 2px;
-    }
-    .brand-text p {
-      font-size: 0.85rem;
-      opacity: 0.9;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-      justify-content: flex-start;
-    }
-    nav a {
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 12px;
-      transition: 0.3s;
-      font-size: 0.95rem;
-    }
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.16);
-      transform: translateY(-1px);
-    }
-    .hero {
-      padding: 34px 0 22px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px;
-    }
-    .school-card h2 {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-    .school-card p {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-    .notice-card {
-      background: linear-gradient(180deg, #ffffff, #f8fbff);
-      border-right: 5px solid var(--accent);
-    }
-    .notice-card h3 {
-      font-size: 1.2rem;
-      color: var(--primary-dark);
-      margin-bottom: 14px;
-    }
-    .notice {
-      background: #eef6ff;
-      border: 1px solid #d9e9f7;
-      border-radius: 14px;
-      padding: 16px;
-      margin-top: 12px;
-    }
-    .notice strong {
-      display: block;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-    .notice p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .section-title {
-      margin: 30px 0 14px;
-      color: var(--primary-dark);
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-    footer {
-      margin-top: 30px;
-      padding: 18px 0;
+
+    .school {
       text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
     }
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      .topbar {
-        justify-content: center;
-      }
-      nav ul {
-        justify-content: center;
-      }
-      .brand-text h1 {
-        font-size: 1rem;
-      }
+
+    .logo {
+      width: 220px;
+      height: 220px;
+
+      object-fit: contain;
+
+      display: block;
+      margin: 0 auto 25px;
     }
+
+    .school-name {
+      color: #1f4e79;
+
+      font-size: 32px;
+      font-weight: bold;
+
+      line-height: 1.8;
+    }
+
     @media (max-width: 600px) {
-      .container {
-        width: min(100% - 20px, var(--container));
+
+      .page {
+        padding-top: 45px;
       }
-      .card {
-        padding: 20px;
+
+      .logo {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px;
       }
-      .school-card h2 {
-        font-size: 1.5rem;
+
+      .school-name {
+        font-size: 23px;
+        padding: 0 15px;
       }
-      nav a {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-      }
+
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand-badge">مد</div>
-        <div class="brand-text">
-          <h1>مدرسه امام صادق ع</h1>
-          <p>سایت رسمی مدرسه</p>
-        </div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#about">درباره ما</a></li>
-          <li><a href="#facilities">امکانات</a></li>
-          <li><a href="#student">داشبورد دانش‌آموز</a></li>
-          <li><a href="#teacher">داشبورد معلم</a></li>
-          <li><a href="#contact">تماس با ما</a></li>
-          <li><a href="#location">لوکیشن</a></li>
-          <li><a href="#address">آدرس</a></li>
-        </ul>
-      </nav>
+
+  <main class="page">
+
+    <div class="school">
+
+      <img
+        class="logo"
+        src="logo.png"
+        alt="لوگوی مدرسه بین المللی امام صادق ع"
+      >
+
+      <h1 class="school-name">
+        مدرسه بین المللی امام صادق ع
+      </h1>
+
     </div>
-  </header>
-  <main class="hero">
-    <div class="container">
-      <div class="grid">
-        <section class="card school-card" id="about">
-          <h2>مدرسه امام صادق</h2>
-          <p>
-            به سایت رسمی مدرسه خوش آمدید. این صفحه فعلاً به صورت ساده و تمیز طراحی شده
-            تا بعداً بخش‌های دیگر مثل اخبار، ثبت‌نام، گالری و پنل‌ها به آن اضافه شود.
-          </p>
-        </section>
-        <aside class="card notice-card">
-          <h3>اطلاعیه‌ها</h3>
-          <div class="notice">
-            <strong>جلسه</strong>
-            <p>جلسه اولیا و مربیان هفته آینده برگزار می‌شود.</p>
-          </div>
-          <div class="notice">
-            <strong>اطلاعیه</strong>
-            <p>برنامه امتحانات به‌زودی در سایت قرار می‌گیرد.</p>
-          </div>
-        </aside>
-      </div>
-    </div>
+
   </main>
-  <footer>
-    © 2026 مدرسه وامسابق - تمامی حقوق محفوظ است
-  </footer>
+
 </body>
 </html>
+```
