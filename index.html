@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,6 @@
   <title>مدرسه بین المللی امام صادق (ع)</title>
 
   <style>
-    /* =========================
-       تنظیمات اولیه
-    ========================= */
 
     * {
       margin: 0;
@@ -31,20 +29,22 @@
 
 
     /* =========================
-       صفحه اول / هدر
+       هدر نارنجی
     ========================= */
 
     .hero {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  background: #E67E22;
-  overflow: hidden;
-}
+      position: relative;
+      width: 100%;
+      height: 250px;
+
+      background: #E67E22;
+
+      overflow: hidden;
+    }
 
 
     /* =========================
-       موج نارنجی روشن
+       موج روشن اول
     ========================= */
 
     .wave-light {
@@ -76,7 +76,7 @@
 
 
     /* =========================
-       موج دوم
+       موج روشن دوم
     ========================= */
 
     .wave-light-2 {
@@ -108,7 +108,7 @@
 
 
     /* =========================
-       موج سفید اصلی پایین
+       موج سفید پایین
     ========================= */
 
     .hero-wave {
@@ -118,41 +118,49 @@
       bottom: -1px;
 
       width: 100%;
-      height: 115px;
+      height: 110px;
 
       z-index: 3;
     }
 
     .hero-wave svg {
       display: block;
-
       width: 100%;
       height: 100%;
     }
 
 
     /* =========================
-       لوگو
+       لوگو - کامپیوتر
     ========================= */
 
-   .logo {
-  position: absolute;
-  top: 10px;
-  right: 50px;
-  width: 110px;
-  height: auto;
-  object-fit: contain;
-  z-index: 10;
-}
+    .logo {
+      position: absolute;
+
+      top: 12px;
+      right: 50px;
+
+      width: 60px;
+      max-width: 60px;
+
+      height: auto;
+
+      object-fit: contain;
+
+      z-index: 100;
+    }
+
+
     /* =========================
-       محتوای صفحه
+       قسمت سفید صفحه
     ========================= */
 
     .content {
       position: relative;
 
       width: 100%;
-      min-height: calc(100vh - 260px);
+
+      min-height: calc(100vh - 250px);
 
       background: #ffffff;
 
@@ -161,7 +169,7 @@
 
 
     /* =========================
-       موبایل
+       تبلت و گوشی
     ========================= */
 
     @media (max-width: 768px) {
@@ -171,9 +179,11 @@
       }
 
       .logo {
-        width: 110px;
+        width: 45px;
+        max-width: 45px;
+
         top: 8px;
-        right: 25px;
+        right: 20px;
       }
 
       .hero-wave {
@@ -205,9 +215,11 @@
       }
 
       .logo {
-        width: 90px;
+        width: 38px;
+        max-width: 38px;
+
         top: 7px;
-        right: 18px;
+        right: 15px;
       }
 
       .hero-wave {
@@ -234,9 +246,9 @@
 <body>
 
 
-  <!-- =====================================
+  <!-- =========================
        صفحه اول
-  ====================================== -->
+  ========================== -->
 
   <header class="hero">
 
@@ -284,22 +296,18 @@
 
     </div>
 
-
   </header>
 
 
-  <!-- =====================================
-       ادامه صفحه اول
-  ====================================== -->
+  <!-- =========================
+       محتوای صفحه اول
+  ========================== -->
 
   <main class="content">
-
-    <!--
-      محتوای صفحه اصلی را اینجا قرار بده
-    -->
 
   </main>
 
 
 </body>
+
 </html>
