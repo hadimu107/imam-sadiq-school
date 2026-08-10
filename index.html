@@ -9,10 +9,6 @@
 
   <style>
 
-    /* =========================
-       تنظیمات اصلی
-    ========================= */
-
     * {
       margin: 0;
       padding: 0;
@@ -43,7 +39,7 @@
       right: 0;
 
       width: 100%;
-      height: 150px;
+      height: 90px;
 
       background: #E67E22;
 
@@ -58,11 +54,11 @@
     .logo {
       position: absolute;
 
-      top: 10px;
-      right: 50px;
+      top: 8px;
+      right: 45px;
 
-      width: 60px;
-      max-width: 60px;
+      width: 55px;
+      max-width: 55px;
 
       height: auto;
 
@@ -73,27 +69,25 @@
 
 
     /* =========================
-       فضای خالی برای نوار ثابت
+       فضای نوار ثابت
     ========================= */
 
     .top-space {
       width: 100%;
-      height: 150px;
+      height: 90px;
     }
 
 
     /* =========================
-       قسمت موج
-       این قسمت ثابت نیست
+       موج
+       ثابت نیست
     ========================= */
 
     .wave-section {
       position: relative;
 
       width: 100%;
-      height: 100px;
-
-      margin-top: 0;
+      height: 90px;
 
       overflow: hidden;
 
@@ -103,18 +97,16 @@
     }
 
 
-    /* =========================
-       موج نارنجی روشن اول
-    ========================= */
+    /* موج اول */
 
     .wave-light {
       position: absolute;
 
       left: -5%;
-      bottom: 35px;
+      bottom: 30px;
 
       width: 110%;
-      height: 80px;
+      height: 70px;
 
       background: rgba(230, 126, 34, 0.12);
 
@@ -135,18 +127,16 @@
     }
 
 
-    /* =========================
-       موج نارنجی روشن دوم
-    ========================= */
+    /* موج دوم */
 
     .wave-light-2 {
       position: absolute;
 
       left: -5%;
-      bottom: 10px;
+      bottom: 8px;
 
       width: 110%;
-      height: 70px;
+      height: 65px;
 
       background: rgba(230, 126, 34, 0.16);
 
@@ -167,9 +157,7 @@
     }
 
 
-    /* =========================
-       موج سفید
-    ========================= */
+    /* موج سفید */
 
     .white-wave {
       position: absolute;
@@ -200,17 +188,13 @@
 
       width: 100%;
 
-      background: #ffffff;
-
       min-height: 1300px;
+
+      background: #ffffff;
 
       z-index: 20;
     }
 
-
-    /* =========================
-       محتوای تستی
-    ========================= */
 
     .content-inner {
       width: 100%;
@@ -239,18 +223,14 @@
     }
 
 
-    /* =========================
-       فضای خالی برای تست اسکرول
-    ========================= */
+    /* فضای اسکرول */
 
     .scroll-space {
       height: 900px;
     }
 
 
-    /* =========================
-       قسمت انتهای صفحه
-    ========================= */
+    /* انتهای صفحه */
 
     .end-box {
       width: 100%;
@@ -274,23 +254,23 @@
     @media (max-width: 768px) {
 
       .top-bar {
-        height: 150px;
+        height: 75px;
       }
 
       .top-space {
-        height: 150px;
+        height: 75px;
       }
 
       .logo {
         width: 45px;
         max-width: 45px;
 
-        top: 8px;
+        top: 7px;
         right: 20px;
       }
 
       .wave-section {
-        height: 85px;
+        height: 75px;
       }
 
       .content-inner h1 {
@@ -311,23 +291,23 @@
     @media (max-width: 480px) {
 
       .top-bar {
-        height: 150px;
+        height: 70px;
       }
 
       .top-space {
-        height: 150px;
+        height: 70px;
       }
 
       .logo {
         width: 38px;
         max-width: 38px;
 
-        top: 7px;
+        top: 6px;
         right: 15px;
       }
 
       .wave-section {
-        height: 75px;
+        height: 70px;
       }
 
       .content-inner {
@@ -363,9 +343,7 @@
   </header>
 
 
-  <!-- =========================
-       فضای نوار ثابت
-  ========================== -->
+  <!-- فضای نوار -->
 
   <div class="top-space"></div>
 
@@ -379,7 +357,6 @@
     <div class="wave-light"></div>
 
     <div class="wave-light-2"></div>
-
 
     <div class="white-wave">
 
@@ -426,12 +403,8 @@
       </p>
 
 
-      <!-- فضای بلند برای تست اسکرول -->
-
       <div class="scroll-space"></div>
 
-
-      <!-- انتهای صفحه -->
 
       <div class="end-box">
         پایان صفحه
