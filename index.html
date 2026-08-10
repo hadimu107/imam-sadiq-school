@@ -9,10 +9,6 @@
 
   <style>
 
-    /* =====================================
-       تنظیمات اصلی
-    ===================================== */
-
     * {
       margin: 0;
       padding: 0;
@@ -32,360 +28,232 @@
     }
 
 
-    /* =====================================
-       رنگ اصلی
-       
-       نوار و موج دقیقاً همین رنگ هستند
-    ===================================== */
+    /* =========================
+       هدر نارنجی
+    ========================= */
 
-    :root {
-      --orange: #E67E22;
-    }
-
-
-    /* =====================================
-       نوار نارنجی ثابت
-    ===================================== */
-
-    .top-bar {
-      position: fixed;
-
-      top: 0;
-      right: 0;
-
-      width: 100%;
-      height: 75px;
-
-      background: var(--orange);
-
-      z-index: 9999;
-
-      /* هیچ سایه یا خط سفید ندارد */
-      border: none;
-      box-shadow: none;
-    }
-
-
-    /* =====================================
-       لوگو
-    ===================================== */
-
-    .logo {
-      position: absolute;
-
-      top: 7px;
-      right: 45px;
-
-      width: 50px;
-      max-width: 50px;
-
-      height: auto;
-
-      object-fit: contain;
-
-      z-index: 10000;
-    }
-
-
-    /* =====================================
-       فضای نوار ثابت
-    ===================================== */
-
-    .top-space {
-      width: 100%;
-      height: 75px;
-
-      background: var(--orange);
-    }
-
-
-    /* =====================================
-       بخش موج
-       
-       ثابت نیست
-       همراه صفحه اسکرول می‌شود
-    ===================================== */
-
-    .wave-section {
+    .hero {
       position: relative;
-
       width: 100%;
-      height: 115px;
+      height: 250px;
 
-      background: var(--orange);
+      background: #E67E22;
 
       overflow: hidden;
-
-      z-index: 10;
-
-      /* هیچ فاصله‌ای با نوار ندارد */
-      margin: 0;
-      padding: 0;
-
-      border: none;
     }
 
 
-    /* =====================================
-       موج اول
-       
-       دقیقاً همان رنگ نوار
-    ===================================== */
+    /* =========================
+       موج روشن اول
+    ========================= */
 
-    .wave-one {
+    .wave-light {
       position: absolute;
 
       left: -5%;
-      bottom: 35px;
+      bottom: 50px;
 
       width: 110%;
       height: 90px;
 
-      background: var(--orange);
+      background: rgba(255, 255, 255, 0.08);
 
       clip-path: polygon(
-        0% 30%,
-        10% 40%,
-        20% 55%,
-        30% 62%,
-        40% 50%,
-        50% 38%,
-        60% 46%,
-        70% 58%,
-        80% 48%,
-        90% 35%,
-        100% 42%,
+        0% 20%,
+        12% 35%,
+        25% 55%,
+        40% 45%,
+        55% 60%,
+        70% 45%,
+        85% 25%,
+        100% 35%,
         100% 100%,
         0% 100%
       );
-
-      border: none;
 
       z-index: 1;
     }
 
 
-    /* =====================================
-       موج دوم
-       
-       دقیقاً همان رنگ نوار
-    ===================================== */
+    /* =========================
+       موج روشن دوم
+    ========================= */
 
-    .wave-two {
+    .wave-light-2 {
       position: absolute;
 
       left: -5%;
-      bottom: 0;
+      bottom: 15px;
 
       width: 110%;
-      height: 80px;
+      height: 90px;
 
-      background: var(--orange);
+      background: rgba(255, 255, 255, 0.10);
 
       clip-path: polygon(
-        0% 38%,
-        10% 48%,
-        20% 60%,
-        30% 52%,
-        40% 40%,
-        50% 50%,
-        60% 62%,
-        70% 50%,
-        80% 40%,
-        90% 47%,
-        100% 42%,
+        0% 30%,
+        15% 45%,
+        30% 35%,
+        45% 50%,
+        60% 45%,
+        75% 30%,
+        90% 40%,
+        100% 35%,
         100% 100%,
         0% 100%
       );
-
-      border: none;
 
       z-index: 2;
     }
 
 
-    /* =====================================
-       محتوای اصلی
-    ===================================== */
+    /* =========================
+       موج سفید پایین
+    ========================= */
+
+    .hero-wave {
+      position: absolute;
+
+      left: 0;
+      bottom: -1px;
+
+      width: 100%;
+      height: 110px;
+
+      z-index: 3;
+    }
+
+    .hero-wave svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    /* =========================
+       لوگو - کامپیوتر
+    ========================= */
+
+    .logo {
+      position: absolute;
+
+      top: 12px;
+      right: 50px;
+
+      width: 60px;
+      max-width: 60px;
+
+      height: auto;
+
+      object-fit: contain;
+
+      z-index: 100;
+    }
+
+
+    /* =========================
+       قسمت سفید صفحه
+    ========================= */
 
     .content {
       position: relative;
 
       width: 100%;
 
-      min-height: 1400px;
+      min-height: calc(100vh - 250px);
 
       background: #ffffff;
 
-      z-index: 20;
+      z-index: 5;
     }
 
 
-    /* =====================================
-       محتوای صفحه
-    ===================================== */
-
-    .content-inner {
-      width: 100%;
-
-      padding: 40px 20px;
-
-      text-align: center;
-    }
-
-
-    .content-inner h1 {
-      color: var(--orange);
-
-      font-size: 28px;
-
-      margin-bottom: 20px;
-    }
-
-
-    .content-inner p {
-      color: #555555;
-
-      font-size: 18px;
-
-      line-height: 2;
-    }
-
-
-    /* =====================================
-       فضای تست اسکرول
-    ===================================== */
-
-    .scroll-space {
-      height: 1000px;
-    }
-
-
-    /* =====================================
-       پایان صفحه
-    ===================================== */
-
-    .end-box {
-      width: 100%;
-
-      padding: 40px 20px;
-
-      background: var(--orange);
-
-      color: #ffffff;
-
-      font-size: 20px;
-
-      border-radius: 20px 20px 0 0;
-    }
-
-
-    /* =====================================
+    /* =========================
        تبلت و گوشی
-    ===================================== */
+    ========================= */
 
     @media (max-width: 768px) {
 
-      .top-bar {
-        height: 65px;
-      }
-
-      .top-space {
-        height: 65px;
+      .hero {
+        height: 210px;
       }
 
       .logo {
-        width: 42px;
-        max-width: 42px;
+        width: 45px;
+        max-width: 45px;
 
-        top: 6px;
+        top: 8px;
         right: 20px;
       }
 
-      .wave-section {
-        height: 95px;
+      .hero-wave {
+        height: 90px;
       }
 
-      .wave-one {
-        height: 75px;
-        bottom: 30px;
+      .wave-light {
+        bottom: 40px;
       }
 
-      .wave-two {
-        height: 68px;
-        bottom: 0;
+      .wave-light-2 {
+        bottom: 10px;
       }
 
-      .content-inner h1 {
-        font-size: 23px;
+      .content {
+        min-height: calc(100vh - 210px);
       }
-
-      .content-inner p {
-        font-size: 16px;
-      }
-
     }
 
 
-    /* =====================================
+    /* =========================
        گوشی کوچک
-    ===================================== */
+    ========================= */
 
     @media (max-width: 480px) {
 
-      .top-bar {
-        height: 60px;
-      }
-
-      .top-space {
-        height: 60px;
+      .hero {
+        height: 185px;
       }
 
       .logo {
-        width: 36px;
-        max-width: 36px;
+        width: 38px;
+        max-width: 38px;
 
-        top: 5px;
+        top: 7px;
         right: 15px;
       }
 
-      .wave-section {
-        height: 80px;
+      .hero-wave {
+        height: 75px;
       }
 
-      .wave-one {
-        height: 65px;
-        bottom: 25px;
+      .wave-light {
+        bottom: 30px;
       }
 
-      .wave-two {
-        height: 58px;
-        bottom: 0;
+      .wave-light-2 {
+        bottom: 5px;
       }
 
-      .content-inner {
-        padding: 30px 15px;
+      .content {
+        min-height: calc(100vh - 185px);
       }
-
-      .content-inner h1 {
-        font-size: 21px;
-      }
-
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- =====================================
-       نوار ثابت
-    ===================================== -->
+  <!-- =========================
+       صفحه اول
+  ========================== -->
 
-  <header class="top-bar">
+  <header class="hero">
+
+
+    <!-- لوگو -->
 
     <img
       src="logo.png"
@@ -393,63 +261,49 @@
       alt="مدرسه بین المللی امام صادق (ع)"
     >
 
+
+    <!-- موج‌های روشن -->
+
+    <div class="wave-light"></div>
+
+    <div class="wave-light-2"></div>
+
+
+    <!-- موج سفید اصلی -->
+
+    <div class="hero-wave">
+
+      <svg
+        viewBox="0 0 1600 160"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+        <path
+          d="
+            M0,65
+            C180,80 320,105 500,102
+            C700,100 850,78 1040,58
+            C1240,38 1410,18 1600,20
+            L1600,160
+            L0,160
+            Z
+          "
+          fill="#ffffff"
+        />
+
+      </svg>
+
+    </div>
+
   </header>
 
 
-  <!-- =====================================
-       فضای نارنجی زیر نوار
-       
-       این قسمت هم نارنجی است
-       تا هیچ خط سفیدی ایجاد نشود
-    ===================================== -->
-
-  <div class="top-space"></div>
-
-
-  <!-- =====================================
-       موج‌ها
-       
-       این قسمت ثابت نیست
-    ===================================== -->
-
-  <section class="wave-section">
-
-    <div class="wave-one"></div>
-
-    <div class="wave-two"></div>
-
-  </section>
-
-
-  <!-- =====================================
-       محتوای صفحه
-    ===================================== -->
+  <!-- =========================
+       محتوای صفحه اول
+  ========================== -->
 
   <main class="content">
-
-    <div class="content-inner">
-
-      <h1>
-        مدرسه بین المللی امام صادق (ع)
-      </h1>
-
-      <p>
-        به وب‌سایت مدرسه بین المللی امام صادق (ع) خوش آمدید
-      </p>
-
-
-      <!-- فضای تست اسکرول -->
-
-      <div class="scroll-space"></div>
-
-
-      <!-- پایان صفحه -->
-
-      <div class="end-box">
-        پایان صفحه
-      </div>
-
-    </div>
 
   </main>
 
