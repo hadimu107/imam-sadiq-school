@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>مدرسه بین المللی امام صادق ع</title>
+  <title>مدرسه بین المللی امام صادق (ع)</title>
 
   <style>
+    /* =========================
+       تنظیمات اولیه
+    ========================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -20,109 +24,153 @@
     }
 
     body {
-      background: #fff;
+      background: #ffffff;
       font-family: Tahoma, Arial, sans-serif;
       overflow-x: hidden;
     }
 
+
     /* =========================
-       HERO / HEADER
+       صفحه اول / هدر
     ========================= */
 
     .hero {
       position: relative;
       width: 100%;
       height: 260px;
-      background: #429da4;
+
+      /* رنگ نارنجی اصلی */
+      background: #E67E22;
+
       overflow: hidden;
     }
 
-    /* موج اصلی پایین هدر */
+
+    /* =========================
+       موج نارنجی روشن
+    ========================= */
+
+    .wave-light {
+      position: absolute;
+
+      left: -5%;
+      bottom: 50px;
+
+      width: 110%;
+      height: 90px;
+
+      background: rgba(255, 255, 255, 0.08);
+
+      clip-path: polygon(
+        0% 20%,
+        12% 35%,
+        25% 55%,
+        40% 45%,
+        55% 60%,
+        70% 45%,
+        85% 25%,
+        100% 35%,
+        100% 100%,
+        0% 100%
+      );
+
+      z-index: 1;
+    }
+
+
+    /* =========================
+       موج دوم
+    ========================= */
+
+    .wave-light-2 {
+      position: absolute;
+
+      left: -5%;
+      bottom: 15px;
+
+      width: 110%;
+      height: 90px;
+
+      background: rgba(255, 255, 255, 0.10);
+
+      clip-path: polygon(
+        0% 30%,
+        15% 45%,
+        30% 35%,
+        45% 50%,
+        60% 45%,
+        75% 30%,
+        90% 40%,
+        100% 35%,
+        100% 100%,
+        0% 100%
+      );
+
+      z-index: 2;
+    }
+
+
+    /* =========================
+       موج سفید اصلی پایین
+    ========================= */
+
     .hero-wave {
       position: absolute;
+
       left: 0;
       bottom: -1px;
+
       width: 100%;
       height: 115px;
-      z-index: 1;
+
+      z-index: 3;
     }
 
     .hero-wave svg {
       display: block;
+
       width: 100%;
       height: 100%;
     }
 
-    /* موج کم‌رنگ اول */
-    .wave-light {
-      position: absolute;
-      left: -5%;
-      bottom: 55px;
-      width: 110%;
-      height: 80px;
-      background: rgba(255, 255, 255, 0.07);
-      clip-path: polygon(
-        0 20%,
-        15% 50%,
-        32% 35%,
-        48% 55%,
-        65% 45%,
-        82% 20%,
-        100% 35%,
-        100% 100%,
-        0 100%
-      );
-      z-index: 0;
-    }
-
-    /* موج دوم */
-    .wave-light-2 {
-      position: absolute;
-      left: -5%;
-      bottom: 25px;
-      width: 110%;
-      height: 80px;
-      background: rgba(255, 255, 255, 0.08);
-      clip-path: polygon(
-        0 15%,
-        20% 35%,
-        40% 25%,
-        60% 55%,
-        78% 30%,
-        100% 45%,
-        100% 100%,
-        0 100%
-      );
-      z-index: 0;
-    }
 
     /* =========================
-       LOGO
+       لوگو
     ========================= */
 
     .logo {
       position: absolute;
-      top: 5px;
-      right: 55px;
+
+      top: 10px;
+      right: 50px;
+
       width: 145px;
       height: auto;
+
       object-fit: contain;
-      z-index: 5;
+
+      z-index: 10;
     }
 
+
     /* =========================
-       CONTENT
+       محتوای صفحه
     ========================= */
 
     .content {
-      min-height: calc(100vh - 260px);
-      background: #fff;
       position: relative;
-      z-index: 2;
+
+      width: 100%;
+      min-height: calc(100vh - 260px);
+
+      background: #ffffff;
+
+      z-index: 5;
     }
 
+
     /* =========================
-       MOBILE
+       موبایل
     ========================= */
 
     @media (max-width: 768px) {
@@ -132,13 +180,13 @@
       }
 
       .logo {
-        width: 105px;
-        right: 25px;
+        width: 110px;
         top: 8px;
+        right: 25px;
       }
 
       .hero-wave {
-        height: 85px;
+        height: 90px;
       }
 
       .wave-light {
@@ -146,7 +194,7 @@
       }
 
       .wave-light-2 {
-        bottom: 15px;
+        bottom: 10px;
       }
 
       .content {
@@ -154,20 +202,25 @@
       }
     }
 
+
+    /* =========================
+       گوشی کوچک
+    ========================= */
+
     @media (max-width: 480px) {
 
       .hero {
-        height: 180px;
+        height: 185px;
       }
 
       .logo {
         width: 90px;
-        right: 18px;
         top: 7px;
+        right: 18px;
       }
 
       .hero-wave {
-        height: 70px;
+        height: 75px;
       }
 
       .wave-light {
@@ -175,60 +228,87 @@
       }
 
       .wave-light-2 {
-        bottom: 8px;
+        bottom: 5px;
       }
 
       .content {
-        min-height: calc(100vh - 180px);
+        min-height: calc(100vh - 185px);
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- صفحه اول -->
+
+  <!-- =====================================
+       صفحه اول
+  ====================================== -->
+
   <header class="hero">
 
+
     <!-- لوگو -->
+
     <img
-      class="logo"
       src="logo.png"
-      alt="مدرسه بین المللی امام صادق ع"
+      class="logo"
+      alt="مدرسه بین المللی امام صادق (ع)"
     >
 
-    <!-- موج های کم رنگ -->
+
+    <!-- موج‌های روشن -->
+
     <div class="wave-light"></div>
+
     <div class="wave-light-2"></div>
 
-    <!-- موج سفید پایین -->
+
+    <!-- موج سفید اصلی -->
+
     <div class="hero-wave">
+
       <svg
         viewBox="0 0 1600 160"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+
         <path
           d="
-            M0,70
-            C180,85 320,110 500,105
-            C720,100 850,75 1040,55
-            C1240,34 1400,18 1600,20
+            M0,65
+            C180,80 320,105 500,102
+            C700,100 850,78 1040,58
+            C1240,38 1410,18 1600,20
             L1600,160
             L0,160
             Z
           "
           fill="#ffffff"
         />
+
       </svg>
+
     </div>
+
 
   </header>
 
-  <!-- ادامه صفحه اول -->
+
+  <!-- =====================================
+       ادامه صفحه اول
+  ====================================== -->
+
   <main class="content">
-    <!-- محتوای صفحه اصلی را اینجا قرار بده -->
+
+    <!--
+      محتوای صفحه اصلی را اینجا قرار بده
+    -->
+
   </main>
+
 
 </body>
 </html>
